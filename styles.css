@@ -1,0 +1,285 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-top: 70px; /* Ajuste para el navbar fijo */
+}
+
+/* Navbar */
+.navbar {
+    transition: background 0.4s, padding 0.4s;
+    padding: 20px 0;
+    background: linear-gradient(90deg, #ff6f61, #ffcc00);
+}
+
+.navbar.scrolled {
+    background: rgba(255, 111, 97, 0.95);
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    margin: 0 10px;
+    color: #fff !important;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffcc00 !important;
+    transform: translateY(-3px);
+}
+
+/* Hero Section */
+.hero {
+    background: url('../img/evento.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: slideInDown 1s ease-in-out;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: slideInUp 1s ease-in-out;
+}
+
+.hero .btn {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: #ff6f61;
+    border: none;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 2s ease-in-out, pulse 2s infinite;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero .btn:hover {
+    background: #ffcc00;
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Detalles del Evento */
+#detalles {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.event-details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.event-card {
+    flex: 1 1 280px;
+    max-width: 350px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(135deg, #ff6f61, #ffcc00);
+    color: white;
+    overflow: hidden;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.event-card .card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.event-card h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    font-size: 1.1rem;
+}
+
+/* Speakers */
+#speakers {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+#speakers .card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    background: white;
+}
+
+#speakers .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+#speakers .card img {
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.3s;
+}
+
+#speakers .card:hover img {
+    transform: scale(1.1);
+}
+
+#speakers .card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+#speakers .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff6f61;
+}
+
+#speakers .card-text {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Registro */
+#registro {
+    padding: 60px 0;
+    background: #fff;
+}
+
+#registro form {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#registro .btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    background: #ff6f61;
+    border: none;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#registro .btn:hover {
+    background: #ffcc00;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Contacto */
+#contacto {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #ff6f61, #ffcc00);
+    color: white;
+}
+
+#contacto h2 {
+    margin-bottom: 30px;
+}
+
+#contacto img {
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#contacto .btn {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: #fff;
+    color: #ff6f61;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+#contacto .btn:hover {
+    background: #ffcc00;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Efecto de flotación en las tarjetas de detalles */
+.event-card {
+    animation: float 3s infinite;
+}
